@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import STAR_CANVAS from "@/clientComponents/starCanvas";
+
+// import { ClerkProvider } from "@clerk/nextjs";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,7 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body
+        className={`${montserrat.className} overflow-x-hidden overflow-y-scroll bg-[#000]`}
+      >
+        {/* <div className="pointer-events-none">
+          <STAR_CANVAS />
+        </div> */}
+        {children}
+      </body>
     </html>
   );
 }

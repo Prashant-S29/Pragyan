@@ -14,7 +14,7 @@ const HOME = () => {
   }, []);
   return (
     <>
-      <div className="w-full min-h-screen bg-black ">
+      <div className="w-full h-screen overflow-hidden bg-black ">
         <SPLINE_HERO />
       </div>
       <div className="w-full h-52 bg-gray-200 my-1" />
